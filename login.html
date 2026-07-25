@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Red Devils FC | Member Login</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: { devil: '#DA291C', devildark: '#A31D14', ink: '#0C0C0C', bone: '#F5F3EF', gold: '#C9A227' },
+        fontFamily: { display: ['Anton', 'sans-serif'], body: ['Inter', 'sans-serif'], num: ['Oswald', 'sans-serif'] }
+      }
+    }
+  }
+</script>
+</head>
+<body class="bg-ink font-body text-bone min-h-screen flex flex-col">
+
+  <header class="border-b-4 border-devil">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="images/logo.png" alt="Club crest" class="h-11 w-11 rounded-full">
+        <span class="font-display text-2xl tracking-wide">RED DEVILS <span class="text-devil">FC</span></span>
+      </a>
+      <nav class="hidden md:flex items-center gap-8 font-num text-sm uppercase tracking-widest">
+        <a href="index.html" class="hover:text-devil transition">Home</a>
+        <a href="about.html" class="hover:text-devil transition">About</a>
+        <a href="contact.html" class="hover:text-devil transition">Contact</a>
+        <a href="login.html" class="text-devil">Member Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="flex-1 flex items-center justify-center px-6 py-20">
+    <div class="w-full max-w-md">
+      <div class="text-center mb-8">
+        <p class="font-num uppercase tracking-[0.3em] text-gold text-sm mb-3">Members Only</p>
+        <h1 class="font-display text-5xl">TURNSTILE<br><span class="text-devil">ACCESS</span></h1>
+      </div>
+
+      <form class="bg-bone text-ink p-10 shadow-2xl space-y-6">
+        <div>
+          <label class="block font-num uppercase text-xs tracking-widest text-ink/60 mb-2">Membership Email</label>
+          <input type="email" placeholder="jane@email.com" class="w-full border-b-2 border-ink/20 focus:border-devil outline-none py-2 bg-transparent">
+        </div>
+        <div>
+          <label class="block font-num uppercase text-xs tracking-widest text-ink/60 mb-2">Password</label>
+          <input type="password" placeholder="••••••••" class="w-full border-b-2 border-ink/20 focus:border-devil outline-none py-2 bg-transparent">
+        </div>
+        <div class="flex items-center justify-between text-sm">
+          <label class="flex items-center gap-2 text-ink/60">
+            <input type="checkbox" class="accent-devil"> Remember me
+          </label>
+          <a href="#" class="text-devil hover:underline">Forgot password?</a>
+        </div>
+        <button type="submit" class="w-full bg-devil hover:bg-devildark transition py-4 font-num uppercase tracking-widest text-white">Enter the Ground</button>
+        <p class="text-center text-sm text-ink/60">Not a member yet? <a href="contact.html" class="text-devil hover:underline">Join the family</a></p>
+      </form>
+    </div>
+  </main>
+
+  <footer class="border-t border-bone/10 text-center py-6 text-xs text-bone/50">
+    &copy; 2026 Red Devils FC — Fan Site Demo
+  </footer>
+
+</body>
+</html>
